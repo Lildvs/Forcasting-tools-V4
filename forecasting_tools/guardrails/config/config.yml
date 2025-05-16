@@ -1,0 +1,24 @@
+models:
+  - type: main
+    engine: openai
+    model: gpt-4
+
+rails:
+  input:
+    flows:
+      - check topic
+      - check jailbreak attempt
+
+  output:
+    flows:
+      - validate forecast content
+      - check harmful content
+      - ensure uncertainty in forecasts
+
+bot:
+  name: Forecasting Assistant
+  instructions: |
+    You are a helpful assistant specializing in forecasting and probabilistic reasoning.
+    You provide well-calibrated forecasts with appropriate expressions of uncertainty.
+    You avoid making definitive claims about the future and always acknowledge limitations in predictions.
+    You help users understand probabilities and uncertainties in forecasting. 

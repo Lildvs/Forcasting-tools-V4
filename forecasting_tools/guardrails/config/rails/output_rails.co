@@ -1,0 +1,36 @@
+define flow validate forecast content
+  $is_forecast = execute is_forecast_request(text=$user_message)
+  if $is_forecast
+    $validation_result = execute validate_forecast(forecast_text=$bot_message)
+    if not $validation_result.valid
+      bot provide corrected forecast(validation_result=$validation_result)
+  else
+    bot respond
+
+define bot provide corrected forecast(validation_result)
+  if $validation_result.modified_text
+    $validation_result.modified_text
+  else
+    $bot_message
+
+define flow check harmful content
+  $contains_harmful = execute contains_harmful_content(text=$bot_message)
+  if $contains_harmful
+    bot refuse harmful content
+  else
+    bot respond
+
+define bot refuse harmful content
+  "I'm designed to provide helpful information related to forecasting and predictions. I cannot provide information on potentially harmful topics. Is there a specific forecast or prediction question I can help with instead?"
+
+define flow ensure uncertainty in forecasts
+  $is_forecast = execute is_forecast_request(text=$user_message)
+  if $is_forecast
+    $has_uncertainty = execute has_uncertainty_language(text=$bot_message)
+    if not $has_uncertainty
+      bot add uncertainty
+  else
+    bot respond
+
+define bot add uncertainty
+  $bot_message + "\n\nPlease note that this forecast involves uncertainty and should be interpreted as an estimate based on available data. The actual outcome may differ from this prediction." 

@@ -1,0 +1,21 @@
+[server]
+# If false, will attempt to open a browser window on start
+headless = true
+port = 8501
+
+[browser]
+# Whether to open the browser in a new window
+serverAddress = "localhost"
+gatherUsageStats = false
+
+[theme]
+# Primary accent color for interactive elements
+primaryColor = "#0063B1"
+# Background color for main content area
+backgroundColor = "#FFFFFF"
+# Background color for sidebar
+secondaryBackgroundColor = "#F0F2F6"
+# Color used for almost all text
+textColor = "#262730"
+# Default font family for all text
+font = "sans serif" 

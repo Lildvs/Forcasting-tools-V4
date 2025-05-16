@@ -2,6 +2,14 @@
 
 Advanced forecasting tools with time series capabilities for making accurate predictions.
 
+## Latest Updates (V2.3)
+
+- **Alternative Research Sources**: Removed AskNews dependencies, now using Perplexity, Exa, and Crawl4AI
+- **Advanced Prompting Techniques**: Implemented Chain-of-Thought, Tree of Thoughts, Constitutional AI, Self-consistency, and World Model Building
+- **Enhanced Ensemble Architecture**: Improved integration between forecasting components and added sophisticated weighting mechanisms
+- **Transparency Improvements**: Better visualizations for understanding forecast contributions and confidence intervals
+- **Scenario Analysis Engine**: Interactive "what-if" analysis system for testing how key factors affect predictions
+
 ## New Features in V2.2
 
 - **Time Series Forecasting**: Analyze trends and make predictions using ARIMA, Prophet, and LSTM models

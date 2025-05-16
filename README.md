@@ -1,8 +1,8 @@
-# Forecasting Tools V2.2
+# Forecasting Tools V4
 
 Advanced forecasting tools with time series capabilities for making accurate predictions.
 
-## Latest Updates (V2.3)
+## Latest Updates (V4)
 
 - **Alternative Research Sources**: Removed AskNews dependencies, now using Perplexity, Exa, and Crawl4AI
 - **Advanced Prompting Techniques**: Implemented Chain-of-Thought, Tree of Thoughts, Constitutional AI, Self-consistency, and World Model Building
@@ -10,7 +10,7 @@ Advanced forecasting tools with time series capabilities for making accurate pre
 - **Transparency Improvements**: Better visualizations for understanding forecast contributions and confidence intervals
 - **Scenario Analysis Engine**: Interactive "what-if" analysis system for testing how key factors affect predictions
 
-## New Features in V2.2
+## New Features in V4
 
 - **Time Series Forecasting**: Analyze trends and make predictions using ARIMA, Prophet, and LSTM models
 - **Robust Confidence Intervals**: Using bootstrapping for more reliable uncertainty estimation
